@@ -1,0 +1,11 @@
+openai
+flask
+#pickle
+
+langchain
+pymupdf
+chromadb
+tiktoken
+pypath
+python-dotenv
+pypdf

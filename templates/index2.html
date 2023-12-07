@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <title>Juan Abril - Resume</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
+  <!--<link rel='stylesheet' href='https://s.plurk.com/0e89357f530f0a843c68440a020d4eb5.css'> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <!--<img src="{{ url_for('static', filename='images/photo.svg') }}" alt="Photo">-->
+
+  
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="resume">
+    <div class="base">
+      <div class="profile">
+        <div class="photo"><img src="{{ url_for('static', filename='images/photo.svg') }}" alt="Photo" />
+        </div>
+        <div class="info">
+          <h4 class="name">Juan David Abril</h4><small class="job">Data Scientist</small>
+        </div>
+      </div>
+      <div class="about">
+        <h3>About me</h3>Experienced system integrator with expertise in R&D, advanced electronic system design, and data management. Skilled in automation, electrical drawings, project execution, Robot/PLC programming, and software development. Proficient in robotics, XR, physiology signal capture, and AI analytics. Committed team player with a focus on interdisciplinary healthcare design and ongoing research involvement. Hold a valid US B1/B2 visa. 
+      </div>
+      <div class="contact">
+        <h3>Contact</h3>
+        <div class="address"><i class="fa fa-map-marker"></i><span>Colombia</span></div>
+        <div class="email"><i class="fa fa-envelope"></i><span>juanchoabril@gmail.com</span></div>
+        <div class="website"><a href="juanmechatronics.online" target="_blank"> <i
+              class="fa fa-home"></i><span>juanmechatronics.online</span></a>
+        </div>
+      </div>
+      <div class="follow">
+        <h3>Follow</h3>
+        <div class="box"><a href="https://github.com/juandabril"><i class="fa fa-github"></i></a><a
+            href="https://www.linkedin.com/in/juan-david-abril-bohorquez/"><i class="fa fa-linkedin"></i></a></div>
+      </div>
+    </div>
+    <div class="func">
+      <div class="work">
+        <h3><i class="fa fa-briefcase"></i>Work Experience</h3>
+        <ul>
+          <li><span>Data Science and AI Coach @ Ucamp</span><small>Mar 2023 - Present</small></li>
+          <li><span>Researcher Engineer @ Universidad Militar</span><small>Aug 2017 - Jan 2020</small></li>
+          <li><span>Mechatronics Engineer@ Ingautin de Colombia</span><small>Dec 2015 - Aug 2017</small></li>
+        </ul>
+      </div>
+      <div class="edu">
+        <h3><i class="fa fa-graduation-cap"></i>Education</h3>
+        <ul>
+          <li><span>doctorate in Engineering - Instituto Politécnico Nacional</span><small>México, 2020 - 2023</small></li>
+		  <li><span>MSC. Mechatronics -  Universidad Militar</span><small>Colombia, 2018 - 2020</small></li>
+          <li><span>BSc. Mechatronics - Universidad Militar</span><small>Colombia, 2011 - 2017</small></li>
+        </ul>
+      </div>
+
+
+      <div class="Download-File">
+        <h3 onclick="descargarArchivo()"><i class="fa fa-star" ></i>Download Pdf File</h3>
+        <ul>
+          <!--  
+          <a href="https://www.example.com" onclick="window.open('https://www.example.com'); return false;">Click Here</a>-->
+          <!--  
+          <button onclick="descargarArchivo()">Descargar</button>-->
+
+        </ul>
+      </div>
+      <div class="AI-Ask">
+        <h3><i class="fa fa-star"></i>Ask AI from this CV</h3>
+        <ul>
+        <form action="/process-input" method="post">  
+        <label for="userInput">Enter Text:</label>
+        <input type="text" id="userInput" name="userInput" placeholder="ASK PDF AI">
+        <button type="submit">ASK</button><!--onclick="transferText()">Refresh</button>
+        <output type="text" id="destinationField">
+         partial <script>
+          function transferText() {
+        const inputText = document.getElementById('inputField').value;
+        const destinationField = document.getElementById('destinationField');
+        destinationField.value = inputText;
+        }
+          </script> -->
+        </form>
+        <div id="processedText">{{ processed_text}} </div>
+
+        </ul>
+      </div>
+      <div class="skills-prog">
+        <h3><i class="fa fa-code"></i>Programming Skills</h3>
+        <ul>
+          <li data-percent="85"><span>Python, C#</span>
+            <div class="skills-bar">
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li data-percent="80"><span> MATLAB, LabVIEW, Solidworks</span>
+            <div class="skills-bar">
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li data-percent="50"><span>HTML, FastAPI </span>
+            <div class="skills-bar">
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li data-percent="50"><span>AI Modeling</span>
+            <div class="skills-bar">
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li data-percent="60"><span>Lean Ux - Agile</span>
+            <div class="skills-bar">
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li data-percent="90"><span>AWS</span>
+            <div class="skills-bar">
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li data-percent="90"><span>Machine Learning</span>
+            <div class="skills-bar">
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li data-percent="70"><span>Project Management</span>
+            <div class="skills-bar">
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li data-percent="75"><span>Coaching, mentoring</span>
+            <div class="skills-bar">
+              <div class="bar"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="interests">
+        <h3><i class="fa fa-star"></i>Interests</h3>
+        <div class="interests-items">
+          <div class="draw"><i class="fa fa-book"></i><span>Reading</span></div>
+		  <!--div class="bicycle"> <i class="fa-bicycle"> </i><span>Mountain Biking</span-->
+          <div class="music"><i class="fa fa-headphones"></i><span>Music</span></div>
+          <div class="game"><i class="fa fa-gamepad"></i><span>Games</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <!-- <script src="./script.js"></script>-->
+
+</body>
+
+</html>
